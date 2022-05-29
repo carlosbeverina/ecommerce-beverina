@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h1>Futuro Ecommerce Beverina</h1>
-      </div>
-    </div>
+  <>
+  <NavBar />
+  </>
   );
 }
 
