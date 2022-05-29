@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../img/logo.png';
+import CartWidget from './CartWidget';
 const bgNav = { backgroundColor: '#93b7ff' };
 
 function NavBar() {
@@ -24,6 +25,7 @@ return (
                 </li>
             </ul>
         </div>
+        <CartWidget items={15}/>
     </div>
 </nav>
 </>
