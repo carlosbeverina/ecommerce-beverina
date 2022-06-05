@@ -6,7 +6,7 @@ const bgNav = { backgroundColor: '#93b7ff' };
 function NavBar() {
 return (
 <>
-<nav className="navbar navbar-expand-lg" style={bgNav}>
+<nav className="navbar navbar-expand-lg mb-4" style={bgNav}>
     <div className="container-fluid">
         <a className="navbar-brand" href="#"><img src={logo} alt="Logo" className="img-fluid logo" /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

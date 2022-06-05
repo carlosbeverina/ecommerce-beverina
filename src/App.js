@@ -13,8 +13,8 @@ function App() {
   return (
   <>
   <NavBar />
-  <ItemListContainer greeting='Proximamente miles de productos para vos!!!' />
-  <ItemCount initial={1} stock={10} onAdd= {onAdd} />
+  <ItemListContainer />
+  {/* <ItemCount initial={1} stock={10} onAdd= {onAdd} /> */}
   </>
   );
 }
