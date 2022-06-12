@@ -1,0 +1,12 @@
+.titulo{
+    color:rgb(8, 155, 253);
+}
+.precio{
+    color:gray;
+    margin-bottom: 2rem;
+}
+.descripcion{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+

@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   
@@ -13,7 +14,8 @@ function App() {
   return (
   <>
   <NavBar />
-  <ItemListContainer />
+  <ItemDetailContainer />
+  {/* <ItemListContainer /> */}
   {/* <ItemCount initial={1} stock={10} onAdd= {onAdd} /> */}
   </>
   );
