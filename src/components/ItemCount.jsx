@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Button, Col, Container, Row, Stack } from "react-bootstrap";
 
-function ItemCount({ initial, stock, onAdd }) {
+export default function ItemCount({ initial, stock, onAdd, prodId }) {
   const [count, setCount] = useState(initial);
 
   const agregar = () => {
@@ -32,13 +32,13 @@ function ItemCount({ initial, stock, onAdd }) {
           <Col className="d-flex justify-content-center ">
               <Button variant= "secondary" className="" onClick={agregar}>+</Button>
               <h2 className="contador m-5">{count}</h2>
-              <Button variant= "secondary" onClick={sacar}>-</Button>
+              <Button variant="secondary" onClick={sacar}>-</Button>
           </Col>
           </Row>
           <Row>
           <Col className="d-flex justify-content-center mt-2">
             <div>
-              <Button variant="outline-secondary" onClick={() => {onAdd(count); reset()}}>Comprar</Button>
+              <Button variant="outline-secondary" onClick={() => {onAdd(count, prodId); reset()}}>Agregar al carrito</Button>
             </div>
           </Col>
         </Row>
@@ -47,4 +47,3 @@ function ItemCount({ initial, stock, onAdd }) {
   );
 }
 
-export default ItemCount;

@@ -13,7 +13,7 @@ export default function Item({ producto }) {
             <Card.Text>${producto.price}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Link to={'item/'+ producto.id}>Detalle</Link>
+            <Link to={'../item/'+ producto.id}>Detalle</Link>
           </Card.Footer>
         </Card>
       </Col>

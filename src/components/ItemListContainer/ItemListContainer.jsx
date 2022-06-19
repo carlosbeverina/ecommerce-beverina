@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList';
 import './ItemListContainer.css'
 
-export default function ItemListContainer({greeting}) {
- const [resultados, setResultados] = useState([]);
+export default function ItemListContainer() {
+  const [loading, setLoading] = useState(true);
+  const [resultados, setResultados] = useState([]);
  const lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quasi maiores. Sit mollitia ab eaque fuga omnis quo recusandae dolor.';
  const cat = useParams();
 
 
  useEffect(() => {
+    setResultados([]);
+    setLoading(true);
     const llamada = new Promise((res, rej) => {
       setTimeout(() => {
         if (cat.cat == undefined) {
@@ -47,14 +51,14 @@ export default function ItemListContainer({greeting}) {
     llamada
       .then((res) => {setResultados(res);})
       .catch((error) => {console.log(error);})
+      .finally(() => {setLoading(false)})
     }
     
   , [cat])
   return (
     <>
-    
-      <h1 className='greeting'>{greeting}</h1>
-        <ItemList productos={ resultados } />
+      <div>{loading && <Container><Row><Col className= "d-flex justify-content-center"><Spinner animation="grow" /></Col></Row></Container>}</div>
+        {resultados != [] && <ItemList productos={ resultados } />}
     
     </>
   )
