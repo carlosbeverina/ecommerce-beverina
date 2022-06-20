@@ -1,44 +1,50 @@
 import React from "react";
-import { useState } from "react";
-import { Button, Col, Container, Row, Stack } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
-export default function ItemCount({ initial, stock, onAdd, prodId }) {
-  const [count, setCount] = useState(initial);
-
+export default function ItemCount({ initial, stock, onAdd, cant, setCant }) {
+  
   const agregar = () => {
-    if (count < stock) {
-      setCount(count + 1);
+    if (cant < stock) {
+      setCant(cant + 1);
     } else {
       alert("No se pueden agregar mas productos.");
     }
   };
 
   const sacar = () => {
-    if (count > initial) {
-      setCount(count - 1);
+    if (cant > initial) {
+      setCant(cant - 1);
     } else {
       alert("No se pueden sacar mas productos.");
     }
   };
 
-  const reset = () => {
-    setCount(initial);
-  }
-
   return (
     <>
       <Container>
-          <Row>
+        <Row>
           <Col className="d-flex justify-content-center ">
-              <Button variant= "secondary" className="" onClick={agregar}>+</Button>
-              <h2 className="contador m-5">{count}</h2>
-              <Button variant="secondary" onClick={sacar}>-</Button>
+            <Button variant="secondary" onClick={sacar}>
+              -
+            </Button>
+
+            <h2 className="contador m-5">{cant}</h2>
+            <Button variant="secondary" className="" onClick={agregar}>
+              +
+            </Button>
           </Col>
-          </Row>
-          <Row>
+        </Row>
+        <Row>
           <Col className="d-flex justify-content-center mt-2">
             <div>
-              <Button variant="outline-secondary" onClick={() => {onAdd(count, prodId); reset()}}>Agregar al carrito</Button>
+              <Button
+                variant="outline-secondary"
+                onClick={() => {
+                  onAdd();
+                }}
+              >
+                Agregar al carrito
+              </Button>
             </div>
           </Col>
         </Row>
@@ -46,4 +52,3 @@ export default function ItemCount({ initial, stock, onAdd, prodId }) {
     </>
   );
 }
-

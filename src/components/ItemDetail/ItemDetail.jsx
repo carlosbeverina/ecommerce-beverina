@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount";
 import "./ItemDetail.css";
 
 export default function ItemDetail({ producto, loading }) {
   const [visItemCount, setVisItemCount] = useState(true);
-  const [cant, setCant] = useState();
+  const [cant, setCant] = useState(0);
 
-  const onAdd = (count, prodId) => {
-    alert(`Agregaste ${count} del id: ${prodId} al carrito`);
-    setCant(cant + count);
+  const { addItem } = useContext(CartContext);
+
+  const onAdd = () => {
+    
+    alert(`Agregaste ${cant} items al carrito`)
     setVisItemCount(false);
+    addItem(producto, cant);
   };
 
   return (
@@ -33,15 +37,16 @@ export default function ItemDetail({ producto, loading }) {
                   initial={1}
                   stock={producto.stock}
                   onAdd={onAdd}
-                  prodId={producto.id}
+                  setCant={setCant}
+                  cant = {cant}
                 />
               )}
-
+              { !visItemCount &&
               <Link className="align-self-center mt-4" to={"../cart"}>
                 <Button variant="primary" onClick={() => {}}>
                   Finalizar Compra
                 </Button>
-              </Link>
+              </Link>}
             </Col>
           </Row>
         </Container>

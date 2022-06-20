@@ -1,9 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-function CartWidget({ items }) {
+export default function CartWidget() {
+  const {getItemQty} = useContext(CartContext);
   return (
     <div>
-      <span>{items}</span>
+      <span>{getItemQty()}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="60"
@@ -16,4 +19,4 @@ function CartWidget({ items }) {
   );
 }
 
-export default CartWidget;
+

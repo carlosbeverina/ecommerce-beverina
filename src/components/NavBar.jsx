@@ -10,14 +10,14 @@ return (
 <>
 <Navbar bg="light" expand="lg" style={bgNav}>
   <Container>
-    <Navbar.Brand href="#home"><Link to='/'><Image className='logotipo' src={logo}></Image></Link></Navbar.Brand>
+    <Navbar.Brand><Link to='/'><Image className='logotipo' src={logo}></Image></Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link><NavLink to='/'>Home</NavLink></Nav.Link>
-        <Nav.Link><NavLink to='/categoria/electro'>Electro</NavLink></Nav.Link>
-        <Nav.Link><NavLink to='/categoria/tecnologia'>Tecnología</NavLink></Nav.Link>
-        <Nav.Link><NavLink to='/categoria/movilidad'>Movilidad</NavLink></Nav.Link>
+        <NavLink className={'me-4'} to='/'>Home</NavLink>
+        <NavLink className={'me-4'} to='/categoria/electro'>Electro</NavLink>
+        <NavLink className={'me-4'} to='/categoria/tecnologia'>Tecnología</NavLink>
+        <NavLink className={'me-4'} to='/categoria/movilidad'>Movilidad</NavLink>
       </Nav>
       <CartWidget items={15}/>
     </Navbar.Collapse>
