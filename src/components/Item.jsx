@@ -6,7 +6,7 @@ export default function Item({ producto }) {
   return (
     <>
       <Col>
-        <Card id={producto.id} style={{ width: "10rem" }} data-testid="product-card">
+        <Card id={producto.id} style={{ width: "10rem" , marginTop: "1rem" }} data-testid="product-card">
           <Card.Img variant="top" src={producto.pictureUrl} />
           <Card.Body>
             <Card.Title>{producto.title}</Card.Title>

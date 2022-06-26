@@ -44,7 +44,7 @@ export default function ItemDetail({ producto, loading }) {
               { !visItemCount &&
               <Link className="align-self-center mt-4" to={"../cart"}>
                 <Button variant="primary" onClick={() => {}}>
-                  Finalizar Compra
+                  Terminar Compra
                 </Button>
               </Link>}
             </Col>

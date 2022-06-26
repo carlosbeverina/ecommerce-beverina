@@ -1,8 +1,8 @@
-import React from 'react'
+import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../img/logo.png';
 import CartWidget from './CartWidget';
-import { Link, NavLink } from 'react-router-dom';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+
 const bgNav = { backgroundColor: '#93b7ff' };
 
 function NavBar() {
@@ -19,9 +19,9 @@ return (
         <NavLink className={'me-4'} to='/categoria/tecnologia'>Tecnología</NavLink>
         <NavLink className={'me-4'} to='/categoria/movilidad'>Movilidad</NavLink>
       </Nav>
-      <CartWidget items={15}/>
+      
     </Navbar.Collapse>
-
+    <CartWidget items={15}/>
   </Container>
 </Navbar>
 </>

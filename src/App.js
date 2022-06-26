@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
 import MyProvider from "./context/CartContext";

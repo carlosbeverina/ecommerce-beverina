@@ -1,0 +1,12 @@
+.cart-detail{
+    width:70vw;
+    display: flex;
+    margin-left: 15vw;
+    margin-top: 1rem;
+    flex-direction: column;
+    
+}
+
+.banner{
+    text-align: center;
+}
