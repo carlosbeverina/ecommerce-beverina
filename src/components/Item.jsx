@@ -7,7 +7,7 @@ export default function Item({ producto }) {
     <>
       <Col>
         <Card id={producto.id} style={{ width: "10rem" , marginTop: "1rem" }} data-testid="product-card">
-          <Card.Img variant="top" src={producto.pictureUrl} />
+          <Card.Img variant="top" src={`${producto.pictureUrl}150`} />
           <Card.Body>
             <Card.Title>{producto.title}</Card.Title>
             <Card.Text>${producto.price}</Card.Text>

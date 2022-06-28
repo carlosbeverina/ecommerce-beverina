@@ -26,7 +26,7 @@ export default function ItemDetail({ producto, loading }) {
         <Container>
           <Row className="d-flex flex-row">
             <Col>
-              <Image src={producto.pictureUrl} />
+              <Image src={`${producto.pictureUrl}400`} />
             </Col>
             <Col className="d-flex flex-column">
               <h1 className="titulo">{producto.title}</h1>

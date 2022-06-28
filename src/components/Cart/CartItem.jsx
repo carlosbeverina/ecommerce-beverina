@@ -7,7 +7,7 @@ export default function CartItem({ producto }) {
   return (
     <Row className="ps-3 pe-3 ms-5 me-5 pt-1 pb-1 border rounded align-items-center">
       <Col sm={3}>
-        <Image fluid className="w-50" src={producto.pictureUrl}></Image>
+        <Image fluid className="w-50" src={`${producto.pictureUrl}150`}></Image>
       </Col>
       <Col sm={5}>
         <h5 className="mb-3">{producto.title}</h5>
