@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./cart.css";
 import CartItem from "./CartItem";
 
 export default function Cart() {
-  const { cart, setCart, emptyCart, deleteItem, getItemPrice } =
-    useContext(CartContext);
+  const { cart, setCart, emptyCart, deleteItem, getItemPrice } = useContext(CartContext);
+  const navigate = useNavigate();
   return (
     <>
       {cart.length == 0 ? (
@@ -42,7 +43,7 @@ export default function Cart() {
                 <h3 className="text-center">El total a pagar es: $ {getItemPrice()}</h3>
                 </Col>
                 <Col className="d-flex justify-content-center mt-3">
-                  <Button variant="success" className="me-3">Ir a pagar</Button>
+                  <Button variant="success" className="me-3" onClick={() => navigate("/checkout", { replace: true })}>Finalizar Compra</Button>
                   <Button variant="outline-danger" onClick={() => emptyCart()}>Vaciar Carrito</Button>
                 </Col>
               </Row>

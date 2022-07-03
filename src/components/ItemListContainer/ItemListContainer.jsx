@@ -39,7 +39,6 @@ export default function ItemListContainer() {
         }
       }
     , [cat]);
-    console.log("resultados",resultados);
   return (
     <>
       <div>{loading && <Container><Row><Col className= "d-flex justify-content-center"><Spinner animation="grow" /></Col></Row></Container>}</div>

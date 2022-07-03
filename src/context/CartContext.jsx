@@ -24,7 +24,7 @@ const MyProvider = ({ children }) => {
     } else {
         
       setCart([...cart, newItem]);
-      console.log(cart);
+
     }
   };
   const emptyCart = () => {
