@@ -1,11 +1,11 @@
 import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../img/logo.png';
-import CartWidget from './CartWidget';
+import CartWidget from './Cart/CartWidget';
 
 const bgNav = { backgroundColor: '#93b7ff' };
 
-function NavBar() {
+export default function NavBar() {
 return (
 <>
 <Navbar bg="light" expand="lg" style={bgNav}>
@@ -27,5 +27,3 @@ return (
 </>
 )
 }
-
-export default NavBar

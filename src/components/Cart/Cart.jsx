@@ -6,9 +6,10 @@ import { CartContext } from "../../context/CartContext";
 import "./cart.css";
 import CartItem from "./CartItem";
 
-export default function Cart() {
+export default function Cart({checkout}) {
   const { cart, setCart, emptyCart, deleteItem, getItemPrice } = useContext(CartContext);
   const navigate = useNavigate();
+  console.log("checkout",checkout);
   return (
     <>
       {cart.length == 0 ? (
@@ -42,10 +43,12 @@ export default function Cart() {
                 <Col>
                 <h3 className="text-center">El total a pagar es: $ {getItemPrice()}</h3>
                 </Col>
+                {!checkout &&
                 <Col className="d-flex justify-content-center mt-3">
                   <Button variant="success" className="me-3" onClick={() => navigate("/checkout", { replace: true })}>Finalizar Compra</Button>
                   <Button variant="outline-danger" onClick={() => emptyCart()}>Vaciar Carrito</Button>
                 </Col>
+                }
               </Row>
             </Container>
           </div>

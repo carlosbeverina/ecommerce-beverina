@@ -1,9 +1,17 @@
 # e-commerce Beverina
-El proyecto se realizo de acuerdo a los parametros definidos en las consignas.
+Proyecto creado durante el curso de ReactJS bajo la dirección del profesor Guillermo Jorge Fergnani.
 
-## Mock Async
-Para simular las consultas a una base de datos o API se utilizan arrays con un setTimeout, por este motivo y para continuar con esta logica el filtrado de categorias y productos se realiza dentro del setTimeout con un if ya que de contar con un API para consultar se realizaría la misma implementación pero cambiando los parametros de la consulta
+## Tecnologias usadas
+Para el desarrollo de la logica y la interfaz se utilizo ReactJS y para el estilo de la interfaz se utilizo react-bootstrap.
 
-Saludos.
+Como motor de bases de datos se utilizo Firestore de Google Firebase.
 
-Carlos.
+El proyecto se encuentra publicado en la siguiente URL:
+
+https://ecommerce-beverina.web.app/
+
+## Objetivos
+El objetivo de este trabajo era comprender y aplicar los conceptos y mejores practicas de ReactJS.
+
+
+Creado por: Carlos Beverina 09/07/2022.

@@ -3,12 +3,12 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Cart from "./components/Cart/Cart";
-import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
 import MyProvider from "./context/CartContext";
-import Checkout from "./components/Checkout";
+import Checkout from "./components/Checkout/Checkout";
 
-function App() {
+export default function App() {
   return (
     <>
       <MyProvider>
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail/ItemDetail';
+import ItemDetail from './ItemDetail';
 import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 export default function ItemDetailContainer({greeting}) {

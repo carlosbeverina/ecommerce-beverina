@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import ItemCount from "../ItemCount";
+import ItemCount from "./ItemCount";
 import "./ItemDetail.css";
 
 export default function ItemDetail({ producto, loading }) {
